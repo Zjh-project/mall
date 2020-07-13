@@ -25,7 +25,7 @@ wx-Page({
     let url = '/home/swiperdata';
     request.get(url).then(res => {
       this.setData({
-        swiperList: res.data.message
+        swiperList: res
       })
     })
   },
@@ -33,7 +33,7 @@ wx-Page({
     let url = '/home/catitems';
     request.get(url).then(res => {
       this.setData({
-        catesList: res.data.message
+        catesList: res
       })
     })
   },
@@ -41,7 +41,7 @@ wx-Page({
     let url = '/home/floordata';
     request.get(url).then(res => {
       this.setData({
-        floorList: res.data.message
+        floorList: res
       })
     })
   },

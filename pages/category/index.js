@@ -36,7 +36,7 @@ Page({
   async getCates() {
     let url = '/categories';
     let res = await request.get(url)
-    this.Cates = res.data.message;
+    this.Cates = res;
     wx.setStorageSync("cates", {time: Date.now(), data: this.Cates});;
     // 构建左侧的大菜单数据
     let leftMenuList = this.Cates.map(v => v.cat_name);
